@@ -1,0 +1,40 @@
+<nav id="sidebar">
+    <!-- Sidebar Header -->
+    <div class="sidebar-header">
+        Filter by
+    </div>
+    <div class="sidebar-body"> 
+    	<div class="sidebar-region gray">
+    		<p>Lanuages</p>
+			{{multiselect-checkboxes options=languages selection=selectedLanguages}}
+		</div>
+		<div class="sidebar-region">
+    		<p>Dates</p>
+    		{{date-picker date=mydate valueFormat='YYYY-MM-DD'}}    		
+    	</div>
+		<div class="sidebar-region gray">
+    		<p>Search Type</p>
+			{{multiselect-checkboxes options=searchTypes selection=selectedSearchTypes}}
+		</div>
+		<div class="sidebar-region">
+    		<p>Price</p>
+			{{ui-slider 			     			     
+			     min=0 
+			     max=1000 }}			
+		</div>
+		<div class="sidebar-region gray">
+    		<p>Max. Endurance</p>
+    		{{radio-button value="High" groupValue=endurance name="MaxEndurance"}} High <br>
+			{{radio-button value="Medium" groupValue=endurance name="MaxEndurance"}} Medium <br>
+			{{radio-button value="Low" groupValue=endurance name="MaxEndurance"}} Low
+    	</div>		
+		<div class="sidebar-region">
+    		<p>Appropriate For</p>
+			{{multiselect-checkboxes options=appropriateTypes selection=selectedAppropriateTypes}}
+    	</div>
+		<div class="sidebar-region gray">
+    		<p>Type of Tour</p>
+			{{multiselect-checkboxes options=tourTypes selection=selectedTourTypes}}
+		</div>
+    </div>
+</nav>

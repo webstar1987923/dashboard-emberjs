@@ -1,0 +1,23 @@
+<div class="row">
+	<div class="col-sm-12">
+		<h3>Tours</h3>		
+	</div>
+	{{#each tours as |tour|}}
+		<div class="col-sm-3">	 	
+			<div class="tour">
+				<img src={{tour.img}}>
+				<p class="name">{{tour.name}}</p>				
+				<p class="loc">{{tour.loc}}</p>				
+				<div class="row price">				
+					<div class="col-sm-7">${{tour.price}} per Group</div>			
+					<div class="col-sm-5">{{tour.hours}} Hours</div>
+				</div>
+				<br>
+				<span>{{tour.desc}}</span>				
+			</div>		
+		</div>
+	{{/each}}
+	<div class="col-sm-12">
+		<hr style="border-width: 3px; margin-top:5vw;">
+	</div>
+</div>

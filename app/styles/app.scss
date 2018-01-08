@@ -1,0 +1,155 @@
+@import "bootstrap";
+@import "bootstrap/theme";
+@import "ember-searchable-select/style";
+
+ul {
+	list-style: none;
+	padding: 0px;
+}
+
+.container {
+	width: 100% !important;
+}
+
+header {    
+    width: 100%;    
+    padding: 20px 0px 14px;
+
+    .container {
+        box-shadow: 0px 17px 20px -14px #ddd;
+    }
+
+    .logo {
+    	img {
+    		height: 4vw;
+    	}
+
+    	margin-right: 1vw;
+    }
+
+    .lang {
+    	img {
+    		height: 1.8vw;
+    	}
+    	color: #a3a3a3;
+    }
+
+    .menu {
+    	line-height: 4vw;    	
+    	text-align: right;
+
+    	li {
+    		display: inline-block;
+    		margin-right: 1vw;
+
+    		a {
+    			color: #a3a3a3;
+    		}
+    	}
+
+    }
+}
+
+.footer_links {
+	a {
+		color: #8d9197;
+	}
+}
+
+footer {
+	.container {
+		border-top: 1px solid #ddd;
+		padding-top: 20px;
+	}
+}
+
+.footer_social {
+
+	margin-top: 1vw;
+	margin-bottom: 3vw;
+
+	a {
+		display: inline-block;
+		width: 27px;
+		height: 27px;
+		margin-left: 1px;
+		line-height: 27px;
+		color: #8d9197;
+		text-align: center;
+		border: solid 1px #8d9197;
+		border-radius: 100%;
+		-ms-border-radius: 100%;
+		-webkit-border-radius: 100%;
+	}
+	
+	a:hover {
+		color: #fff;
+		border-color: #ec0928;
+		background-color: #ec0928;
+	}
+}
+
+.sidebar-header {
+	background: red;
+    color: white;
+    height: 40px;    
+    padding-left: 20px;
+    line-height:40px;
+    font-weight: bold;
+}
+
+.gray {
+	background: #f2f2f2;
+}
+
+.sidebar-region {
+	padding: 20px 0 20px 20px;
+    
+    .multiselect-checkboxes {
+    	label {
+    		font-weight: normal;
+    	}
+    }
+
+}
+
+.guide {
+	padding: 10px;
+    text-align: center;
+    border: 1px solid #ddd;
+
+    img {
+    	width: 70%;
+    }
+	
+	.rate {
+		border-top: 1px solid #ddd;
+	}
+	
+}
+
+.excursion, .tour {	    
+    border-bottom: 1px solid #ddd;
+    color: #d8d8d8;
+    height: 22vw;
+    margin-bottom: 4vw;
+
+    img {
+    	width: 100%;
+    }
+
+    .name {
+    	color: #eeb554;
+	    font-size: 0.8vw;
+	    margin-top: 0.5vw;
+    }
+
+    .loc {
+    	font-weight: bold;
+    	color: black;
+    }
+
+    .price {
+        font-size: 0.8em;    	
+    }
+}

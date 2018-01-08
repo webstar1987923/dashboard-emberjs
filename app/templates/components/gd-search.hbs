@@ -1,0 +1,14 @@
+<div class="row">
+	<div class="col-sm-12">
+		<h3>Select your treck</h3>
+	</div>
+    <div class="col-sm-12">
+	    {{searchable-select
+		    content=talkTags
+			sortBy="name"
+			optionLabelKey="tag"
+			multiple=true
+			selected=selectedTags			
+			on-add=(action "addNew")}}
+	</div>        
+</div>
