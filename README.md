@@ -51,3 +51,15 @@ Specify what it takes to deploy your app.
   * [ember inspector for chrome](https://chrome.google.com/webstore/detail/ember-inspector/bmdblncegkenkacieihfhpjfppoconhi)
   * [ember inspector for firefox](https://addons.mozilla.org/en-US/firefox/addon/ember-inspector/)
 
+
+
+#install extra ember plugin
+ember install ember-multiselect-checkboxes
+ember install ember-radio-button
+ember install ui-ember-slider
+ember install:addon ember-cli-datepicker
+ember install ember-searchable-select
+
+   app.scss -   @import "ember-searchable-select/style";
+
+ember install ember-star-rateyo
