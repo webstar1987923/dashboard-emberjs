@@ -3,14 +3,14 @@
 		<h3>Shore Excurtions</h3>		
 	</div>
 	{{#each excurtions as |excursion|}}
-		<div class="col-sm-3">	 	
+		<div class="col-lg-2 col-md-3 col-sm-4">	 	
 			<div class="excursion">
 				<img src={{excursion.img}}>
 				<p class="name">{{excursion.name}}</p>				
 				<p class="loc">{{excursion.loc}}</p>				
 				<div class="row price">				
 					<div class="col-sm-7">${{excursion.price}} per Group</div>			
-					<div class="col-sm-5">{{excursion.hours}} Hours</div>
+					<div class="col-sm-5 text-to-right">{{excursion.hours}} Hours</div>
 				</div>
 				<br>
 				<span>{{excursion.desc}}</span>				

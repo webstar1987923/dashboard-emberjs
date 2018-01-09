@@ -1,18 +1,26 @@
 <header>
     <div class="container">
     	<div class="row">
-			<div class="col-sm-6">		        
-	          	<a href="#" class="logo"><img src="assets/images/logo.png" alt=""></a>		        
-	          	<a href="#" class="lang"><img src="assets/images/flag-icon.png" alt=""> Spanish </a> |
-	          	<a href="#" class="lang"><img src="assets/images/currency-icon.png" alt=""> USD</a>		        
+			<div class="col-sm-8 col-md-8">
+				<div class="logo-region">		        
+		          	<a href="#" class="logo"><img src="assets/images/logo.png" alt=""></a>		        
+		          	<a href="#" class="lang"><img src="assets/images/flag-icon.png" alt=""> Spanish </a> |
+		          	<a href="#" class="lang"><img src="assets/images/currency-icon.png" alt=""> USD</a>
+	          	</div>
+	          	<div class="icon-addon addon-lg">
+                    <input type="text" placeholder="Search" class="form-control" id="search">
+                    <label for="search" class="glyphicon glyphicon-search" title="search"></label>
+                </div>        
 			</div>					      	
-	      	<div class="col-sm-6 menu collapse navbar-collapse">		        
-	        	<ul class="nav navbar-nav">
-		            <li>{{link-to 'About Us' 'about'}}</li>	            
-		            <li><a href="#">Help</a></li>
-		            <li><a href="#">Sign In</a></li>
-		            <li><a href="#">Sign Up</a></li>
-	        	</ul>		        
+	      	<div class="col-sm-4 col-md-4 text-to-right">		        
+	      		<nav class="navbar menu">
+		        	<ul class="nav navbar-nav">
+			            <li>{{link-to 'About Us' 'about'}}</li>	            
+			            <li><a href="#">Help</a></li>
+			            <li><a href="#">Sign In</a></li>
+			            <li><a href="#">Sign Up</a></li>
+		        	</ul>		        
+		        </nav>
 	      	</div>	      	
       	</div>
     </div>
