@@ -17,16 +17,15 @@ header {
 
     .container {
         box-shadow: 0px 17px 20px -14px #ddd;
-        padding-bottom: 22px;
+        padding-bottom: 10px;
     }
 
     .logo {
     	img {
     		height: 51px;
             width: 100px;
-    	}
-
-    	margin-right: 27px;
+            margin-top: -12px;
+    	}    	
     }
 
     .lang {
@@ -39,12 +38,9 @@ header {
 
     .menu {
     	line-height: 4vw;    	
-    	text-align: right;
+    	float: right;
 
-    	li {
-    		display: inline-block;
-    		margin-right: 1vw;
-
+    	li {    		
     		a {
     			color: #a3a3a3;
     		}
@@ -52,7 +48,21 @@ header {
 
     }
 
-    .logo-region { float: left; }    
+    .logo-region { 
+        
+        float: left; 
+        margin-top: 18px;
+
+        .logo-nav {
+            list-style : none;
+            .dropdown {
+                float: left;
+                display: block;
+                position: relative;
+                margin-right: 14px;
+            }   
+        }
+    }    
 }
 
 .footer_links {
@@ -149,23 +159,16 @@ footer {
     }
 
     .name {
-    	color: #eeb554;
-	    font-size: 0.8vw;
+    	color: #eeb554;	    
 	    margin-top: 0.5vw;
     }
 
     .loc {
     	font-weight: bold;
-    	color: black;        
-        font-size: 1vw;
+    	color: black;                
     }
-
-    .price {
-        font-size: 0.8vw;    	        
-    }
-
+    
     span {        
-        font-size: 1vw;
         text-align: left;
     }
 }
@@ -193,12 +196,11 @@ footer {
 .icon-addon {
   float: left;
   position: relative;
-  margin-top: 9px;
+  margin: 13px 0 0 13px;
   width: 220px;
   color: #555;
-  display: block;
-  margin-left: 13px;
-  
+  display: block;  
+
   &:after, &:before {
     display: table;
     content: " ";
@@ -252,5 +254,108 @@ footer {
   }
   .form-control:focus + .glyphicon, &:hover .glyphicon, .form-control:focus + .fa, &:hover .fa {
     color: #2580db;
+  }
+}
+
+
+/* mobile menu */
+
+.menu-btn {
+  position: relative;
+  display: none;
+  float: right;
+  width: 30px;
+  height: 30px;
+  margin-top: 13px;
+  transition: all .5s ease;
+  -webkit-transition: all .5s ease;
+  -moz-transition: all .5s ease;
+  span {
+    display: block;
+    top: 50%;
+    margin-top: -2px;
+    transition-duration: 0.3s;
+    transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+    width: 30px;
+    height: 3px;
+    background-color: #4a4a4a;
+    border-radius: 1px;
+    -webkit-border-radius: 1px;
+    -moz-border-radius: 1px;
+    position: absolute;
+    left: 0;
+    transition-property: -webkit-transform;
+    transition-property: transform;
+    transition-property: transform, -webkit-transform;
+    transition-duration: 0.15s;
+    transition-timing-function: ease;
+    &::before, &::after {
+      width: 30px;
+      height: 3px;
+      background-color: #4a4a4a;
+      border-radius: 1px;
+      -webkit-border-radius: 1px;
+      -moz-border-radius: 1px;
+      position: absolute;
+      left: 0;
+      transition-property: -webkit-transform;
+      transition-property: transform;
+      transition-property: transform, -webkit-transform;
+      transition-duration: 0.15s;
+      transition-timing-function: ease;
+    }
+    &::before, &::after {
+      content: "";
+      display: block;
+    }
+    &::before {
+      top: -7px;
+      transition: top 0.1s 0.34s ease-in, opacity 0.1s ease-in;
+    }
+    &::after {
+      bottom: -7px;
+      transition: bottom 0.1s 0.34s ease-in, -webkit-transform 0.3s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+      transition: bottom 0.1s 0.34s ease-in, transform 0.3s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+      transition: bottom 0.1s 0.34s ease-in, transform 0.3s cubic-bezier(0.55, 0.055, 0.675, 0.19), -webkit-transform 0.3s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+    }
+  }
+  &.active span {
+    -webkit-transform: rotate(225deg);
+    transform: rotate(225deg);
+    transition-delay: 0.14s;
+    transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    &::before {
+      top: 0;
+      opacity: 0;
+      transition: top 0.1s ease-out, opacity 0.1s 0.14s ease-out;
+    }
+    &::after {
+      bottom: 0;
+      -webkit-transform: rotate(-90deg);
+      transform: rotate(-90deg);
+      transition: bottom 0.1s ease-out, -webkit-transform 0.3s 0.14s cubic-bezier(0.215, 0.61, 0.355, 1);
+      transition: bottom 0.1s ease-out, transform 0.3s 0.14s cubic-bezier(0.215, 0.61, 0.355, 1);
+      transition: bottom 0.1s ease-out, transform 0.3s 0.14s cubic-bezier(0.215, 0.61, 0.355, 1), -webkit-transform 0.3s 0.14s cubic-bezier(0.215, 0.61, 0.355, 1);
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  header nav {
+    display: none;
+  }
+
+  header .menu {
+    text-align: center;
+    float: none;
+  }
+
+  .menu-btn {
+    display: block;
+    float: right;
+  }
+
+  .icon-addon.addon-lg {
+    display:none;
   }
 }
