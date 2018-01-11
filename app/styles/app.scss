@@ -104,13 +104,44 @@ footer {
 	}
 }
 
+/* sidebar */
+.wrapper {
+  display: flex;
+  align-items: stretch;
+}        
+
+#sidebar {
+  min-width: 250px;
+  max-width: 250px;
+}
+
+#content {
+  padding: 20px;  
+  transition: all 0.3s;
+}
+
+#sidebar.active {
+    margin-left: -250px;
+}
+
+
 .sidebar-header {
 	background: red;
-    color: white;
-    height: 40px;    
-    padding-left: 20px;
-    line-height:40px;
-    font-weight: bold;
+  color: white;
+  height: 40px;    
+  padding-left: 20px;
+  line-height:40px;
+  font-weight: bold;
+
+  .filterby {
+    float: right;
+    line-height: 40px;
+    margin-right: 10px;
+  }
+}
+
+#sidebarCollapse {
+  display: none;
 }
 
 .gray {
@@ -134,14 +165,19 @@ footer {
 
 .guide {
 	padding: 10px;
-    text-align: center;
-    border: 1px solid #ddd;
-    margin-bottom: 4vw;
+  text-align: center;
+  border: 1px solid #ddd;
+  margin-bottom: 4vw;
 
-    img {
-    	width: 70%;
-    }
+  img {
+  	width: 70%;
+  }
 	
+  .desc {
+    height: 60px;
+    contain: strict;
+  }
+
 	.rate {
 		border-top: 1px solid #ddd;
 	}
@@ -151,8 +187,7 @@ footer {
 .excursion, .tour {	    
     border-bottom: 1px solid #ddd;
     color: #d8d8d8;    
-    margin-bottom: 4vw;
-    padding-bottom: 2vw;
+    margin-bottom: 21px;    
 
     img {
     	width: 100%;
@@ -168,8 +203,9 @@ footer {
     	color: black;                
     }
     
-    span {        
-        text-align: left;
+    .desc {        
+        height: 60px;
+        contain: strict;
     }
 }
 
@@ -197,7 +233,7 @@ footer {
   float: left;
   position: relative;
   margin: 13px 0 0 13px;
-  width: 220px;
+  width: 100%;
   color: #555;
   display: block;  
 
@@ -358,4 +394,16 @@ footer {
   .icon-addon.addon-lg {
     display:none;
   }
+
+  #sidebar {
+    margin-left: -250px;
+  }
+  #sidebar.active {
+    margin-left: 0;
+  }
+
+  #sidebarCollapse {
+    display: block;
+  }
+
 }

@@ -17,8 +17,13 @@ export default Ember.Component.extend({
 
 	endurance: 'High',
 
-	mydate: ''
+	mydate: '',
 
+	didInsertElement: function () {
+		$('.sidebar-header').on('click', function () {
+	        $('#sidebar').toggleClass('active');
+	        $("#sidebarCollapse").css("display", "block");
+	    });
 
-
+	}
 });
