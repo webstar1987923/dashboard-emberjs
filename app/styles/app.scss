@@ -200,12 +200,17 @@ footer {
 
     .loc {
     	font-weight: bold;
-    	color: black;                
+    	color: black;
+      height: 36px;
     }
     
     .desc {        
-        height: 60px;
-        contain: strict;
+      height: 60px;
+      contain: strict;
+    }
+
+    .price {
+      height: 40px;
     }
 }
 
